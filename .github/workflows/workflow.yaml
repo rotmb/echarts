@@ -1,0 +1,15 @@
+name: sQS
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '* * * * *'
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - run: echo sQS && source workflow.sh
